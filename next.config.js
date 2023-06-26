@@ -1,14 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+      },
+    ],
+  },
+  async headers() {
+    return [
+      {
+        source: "/favicon.ico",
+        headers: [
           {
-            protocol: 'https',
-            hostname: 'cdn.sanity.io',
-            port: '',
+            key: "Content-Type",
+            value: "image/png",
           },
         ],
       },
-}
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
