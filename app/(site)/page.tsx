@@ -27,7 +27,7 @@ export default async function Home() {
             key={badge._id}
             >
             <img
-            className="h-10 m-2 font-medium text-white transition-colors duration-300  rounded-full focus:shadow-outline focus:outline-none shadow-md"
+            className="h-10 m-2 font-medium text-white transition-colors duration-300 hover:scale-105 hover:border-blue-500 transition duration-300 rounded-full shadow-md"
               src={badge.tagUrl}
               alt={badge.title}
               // width={100}

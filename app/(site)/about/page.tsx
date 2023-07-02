@@ -7,7 +7,7 @@ const About = () => {
       <div className="bg-white rounded-lg shadow-md p-8 mb-8">
         <h1 className="text-3xl font-bold mb-4">About Me</h1>
         <p className="text-gray-600">
-          Hello! I'm Harsh, and I have a strong interest in AI/ML and web development. I enjoy exploring the intersection of these fields and applying them to create innovative solutions. In addition to my technical pursuits, I am also passionate about continuously learning and improving my skills.
+          Hello! I&apos;m Harsh, and I have a strong interest in AI/ML and web development. I enjoy exploring the intersection of these fields and applying them to create innovative solutions. In addition to my technical pursuits, I am also passionate about continuously learning and improving my skills.
         </p>
       </div>
 
