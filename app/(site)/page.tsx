@@ -1,10 +1,10 @@
-import { getProjects } from "@/sanity/sanity-utils";
+import { getProjects, getBadges } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home() {
   const projects = await getProjects();
-
+  const badges = await getBadges();
   return (
     <div>
       <h1 className="text-7xl font-extrabold">
@@ -14,9 +14,19 @@ export default async function Home() {
         </span>
         !
       </h1>
-      <p className="mt-3 text-xl text-gray-600">
+      <p className="mt-3 text-xl href={badge.skillUrl}text-gray-600">
         Aloha Everyone! Check out my projects
       </p>
+      {badges.map((badge) => (
+        <div key={badge._id}>
+          {badge.display && (
+            <a href={badge.skillUrl} target="_blank">
+              <img src={badge.tagUrl} />
+            </a>
+          )}
+        </div>
+      ))}
+
       <h2 className="mt-24 text-bold text-gray-700 text-3xl">My Projects</h2>
 
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
