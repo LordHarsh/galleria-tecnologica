@@ -6,6 +6,6 @@ export type Badge = {
   slug: string;
   tagUrl: string;
   skillUrl: string;
-  category: "language" | "framework" | "ide" | "algorithm" | "field";
+  category: string;
   level: "beginner" | "intermediate" | "professional";
 };
