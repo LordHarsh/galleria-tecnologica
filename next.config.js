@@ -11,6 +11,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "img.shields.io",
         port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "skillicons.dev",
+        port: "",
       }
     ],
   },

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { getProjects, getBadges } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,6 +6,10 @@ import Link from "next/link";
 export default async function Home() {
   const projects = await getProjects();
   const badges = await getBadges();
+  const languageBadges = badges.filter(badge => badge.category.includes('language') && badge.display)
+  const webDevBadges = badges.filter(badge => badge.category.includes('webdev') && badge.display)
+  const ai_mlBadges = badges.filter(badge => badge.category.includes('ai_ml') && badge.display)
+
   return (
     <div>
       <h1 className="text-7xl font-extrabold text-gray-800">
@@ -18,24 +23,6 @@ export default async function Home() {
       <p className="mt-3 text-xl text-gray-600 shadow-sm">
         Ciao Everyone! Check out my projects
       </p>
-      <div className="flex flex-wrap mt-6">
-        {badges.map((badge) => (
-          <a
-            href={badge.skillUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={badge._id}
-            >
-            <img
-            className="h-10 m-2 font-medium text-white transition-colors duration-300 hover:scale-105 hover:border-blue-500 transition duration-300 rounded-full shadow-md"
-              src={badge.tagUrl}
-              alt={badge.title}
-              // width={100}
-              // height={28}
-            />
-          </a>
-        ))}
-      </div>
 
       <h2 className="mt-24 text-bold text-gray-700 text-3xl">My Projects</h2>
 
@@ -59,6 +46,55 @@ export default async function Home() {
               {project.name}
             </div>
           </Link>
+        ))}
+      </div>
+      {/* Here starts the skill tags */}
+      <div className="flex flex-wrap mt-6">
+        {languageBadges.map((badge) => (
+          <a
+            href={badge.skillUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={badge._id}
+            >
+            <img
+            className="h-10 m-2 font-medium text-white transition-colors duration-300 hover:scale-105 hover:border-blue-500 transition rounded-full shadow-md"
+              src={badge.tagUrl}
+              alt={badge.title}
+            />
+          </a>
+        ))}
+      </div>
+      <div className="flex flex-wrap mt-6">
+        {ai_mlBadges.map((badge) => (
+          <a
+            href={badge.skillUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={badge._id}
+            >
+            <img
+            className="h-10 m-2 font-medium text-white transition-colors duration-300 hover:scale-105 hover:border-blue-500 transition  rounded-full shadow-md"
+              src={badge.tagUrl}
+              alt={badge.title}
+            />
+          </a>
+        ))}
+      </div>
+      <div className="flex flex-wrap mt-6">
+        {webDevBadges.map((badge) => (
+          <a
+            href={badge.skillUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={badge._id}
+            >
+            <img
+            className="h-10 m-2 font-medium text-white transition-colors duration-300 hover:scale-105 hover:border-blue-500 transition  rounded-full shadow-md"
+              src={badge.tagUrl}
+              alt={badge.title}
+            />
+          </a>
         ))}
       </div>
     </div>

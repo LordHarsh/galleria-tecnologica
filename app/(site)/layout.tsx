@@ -3,6 +3,7 @@ import "../globals.css";
 import { Inter } from "next/font/google";
 import { getPages } from "@/sanity/sanity-utils";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
