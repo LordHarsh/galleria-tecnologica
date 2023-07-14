@@ -2,6 +2,8 @@
 import { getProjects, getBadges } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
+import Tag from "./components/tag";
+
 
 export default async function Home() {
   const projects = await getProjects();
@@ -26,7 +28,7 @@ export default async function Home() {
 
       <h2 className="mt-24 text-bold text-gray-700 text-3xl">My Projects</h2>
 
-      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {projects.map((project) => (
           <Link
             href={`/projects/${project.slug}`}
@@ -48,53 +50,30 @@ export default async function Home() {
           </Link>
         ))}
       </div>
+      
       {/* Here starts the skill tags */}
+      {/* Trying a table */}
+      
+      
+      
+      {/* Languages */}
       <div className="flex flex-wrap mt-6">
         {languageBadges.map((badge) => (
-          <a
-            href={badge.skillUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={badge._id}
-            >
-            <img
-            className="h-10 m-2 font-medium text-white transition-colors duration-300 hover:scale-105 hover:border-blue-500 transition rounded-full shadow-md"
-              src={badge.tagUrl}
-              alt={badge.title}
-            />
-          </a>
+          Tag(badge)
         ))}
       </div>
+
+      {/* AI/ML */}
       <div className="flex flex-wrap mt-6">
         {ai_mlBadges.map((badge) => (
-          <a
-            href={badge.skillUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={badge._id}
-            >
-            <img
-            className="h-10 m-2 font-medium text-white transition-colors duration-300 hover:scale-105 hover:border-blue-500 transition  rounded-full shadow-md"
-              src={badge.tagUrl}
-              alt={badge.title}
-            />
-          </a>
+          Tag(badge)
         ))}
       </div>
+
+      {/* Web dev */}
       <div className="flex flex-wrap mt-6">
         {webDevBadges.map((badge) => (
-          <a
-            href={badge.skillUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={badge._id}
-            >
-            <img
-            className="h-10 m-2 font-medium text-white transition-colors duration-300 hover:scale-105 hover:border-blue-500 transition  rounded-full shadow-md"
-              src={badge.tagUrl}
-              alt={badge.title}
-            />
-          </a>
+          Tag(badge)
         ))}
       </div>
     </div>
