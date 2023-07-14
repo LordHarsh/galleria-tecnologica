@@ -13,7 +13,7 @@ export default async function Home() {
   const ai_mlBadges = badges.filter(badge => badge.category.includes('ai_ml') && badge.display)
 
   return (
-    <div>
+    <div className="pt-5">
       <h1 className="text-5xl font-extrabold text-gray-800">
         Hello I&apos;m{" "}
         <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
@@ -22,7 +22,7 @@ export default async function Home() {
         !
       </h1>
 
-      <p className="mt-3 text-xl text-gray-600 shadow-sm">
+      <p className="mt-3 text-xl text-gray-600">
         Ciao Everyone! Check out my projects
       </p>
 
@@ -44,7 +44,7 @@ export default async function Home() {
                 className="object-cover rounded-lg border border-gray-500"
               />
             )}
-            <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+            <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent lg:text-lg">
               {project.name}
             </div>
           </Link>

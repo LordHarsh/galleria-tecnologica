@@ -21,11 +21,11 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className + "mx-auto py-10 px-5"}>
+      <body className={inter.className + "mx-auto pt-10 px-5"}>
         <header className="lg:px-10 flex items-center justify-between">
           <Link
             href="/"
-            className="pb-2 text-lg md:text-5xl lg:text-6xl bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent font-bold"
+            className="pb-4 text-lg md:text-5xl lg:text-6xl bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent font-bold"
           >
             Galleria Tecnologica
           </Link>
@@ -37,7 +37,7 @@ export default async function RootLayout({
             ))}
           </div>
         </header>
-        <main className="py-10 lg:px-10"> {children}</main>
+        <main className="lg:px-10"> {children}</main>
       </body>
     </html>
   );
