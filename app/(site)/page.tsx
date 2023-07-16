@@ -27,6 +27,10 @@ export default async function Home() {
       name: "Databases",
       title: "database",
     },
+    {
+      name: "OS",
+      title: "os",
+    },
   ];
 
   return (
