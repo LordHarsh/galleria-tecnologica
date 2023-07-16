@@ -6,6 +6,7 @@ const Tag = (badge: Badge) => {
       target="_blank"
       rel="noopener noreferrer"
       key={badge._id}
+      className="h-2"
     >
       <img
         className="h-10 m-2 font-medium text-white transition-colors duration-300 hover:scale-105 hover:border-blue-500 transition  rounded-full shadow-md"
