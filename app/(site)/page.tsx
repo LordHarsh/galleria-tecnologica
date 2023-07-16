@@ -89,7 +89,7 @@ export default async function Home() {
             <div className="lg:w-2/12 min-w-min w-11/12 lg:border border-slate-300 m-2 p-2 rounded-3xl text-center bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent text-lg lg:text-2xl bg-gray-300">
               {category.name}
             </div>
-            <div className="w-full lg:w-7/12 flex flex-row justify-center">
+            <div className="w-full lg:w-6/12 flex flex-row justify-center">
               <div className="box-content border-slate-300 m-2 p-2 rounded-3xl flex-initial">
                 <AutoAwesomeSharpIcon sx={{ color: "#FFD700", height: "100%" }} />
               </div>
@@ -112,7 +112,7 @@ export default async function Home() {
                     ))}
               </div>
             </div>
-            <div className="w-full lg:w-3/12 flex flex-row justify-center">
+            <div className="w-full lg:w-4/12 flex flex-row justify-center">
               <div className="box-content border-slate-300 m-2 p-2 rounded-3xl flex-initial">
                 <StarHalfIcon sx={{ color: "#4169E1", height: "100%" }} />
               </div>
