@@ -2,7 +2,7 @@ import Link from "next/link";
 import "../globals.css";
 import { Inter } from "next/font/google";
 import { getPages } from "@/sanity/sanity-utils";
-
+import SchoolIcon from '@mui/icons-material/School';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,11 +30,14 @@ export default async function RootLayout({
             Galleria Tecnologica
           </Link>
           <div className="flex items-center gap-5 text-sm text-grey-600">
-            {pages.map((page) => (
+            {/* {pages.map((page) => (
               <Link key={page._id} href={`/${page.slug}`} className="hover:underline">
                 {page.title}
               </Link>
-            ))}
+            ))} */}
+            <Link href='/about' className="hover:underline">
+              <SchoolIcon />
+            </Link>
           </div>
         </header>
         <main className="lg:px-10"> {children}</main>
