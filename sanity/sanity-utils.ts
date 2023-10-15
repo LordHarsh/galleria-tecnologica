@@ -1,5 +1,6 @@
 import { Project } from "@/types/Project";
 import { Page } from "@/types/Page";
+import { Badge } from "@/types/Badge";
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
 
@@ -53,5 +54,22 @@ export async function getPage(slug: string): Promise<Page> {
             content
         }`,
     { slug }
+  );
+}
+
+
+export async function getBadges(): Promise<Badge[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type=="badge"]{
+      _id,
+      _createdAt,
+      title,
+      display,
+      "slug":slug.current,
+      tagUrl,
+      skillUrl,
+      category,
+      level
+      }`
   );
 }
