@@ -44,9 +44,20 @@ export default async function Home() {
       </h1>
 
       <p className="mt-3 text-xl text-gray-600">
-        Ciao Everyone! Check out my projects
+        Ciao Everyone!
       </p>
 
+      <h2 className="mt-24 text-bold text-gray-700 text-3xl">About Me</h2>
+
+      <div className="bg-white border  rounded-xl shadow-md mt-5 p-8 mb-8">
+        <p className="text-gray-600 text-lg">
+          Hello! I&apos;m Harsh Banka, and I have a strong interest in AI/ML and
+          web development. I enjoy exploring the intersection of these fields
+          and applying them to create innovative solutions. In addition to my
+          technical pursuits, I am also passionate about continuously learning
+          and improving my skills.
+        </p>
+      </div>
       <h2 className="mt-24 text-bold text-gray-700 text-3xl">My Projects</h2>
 
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

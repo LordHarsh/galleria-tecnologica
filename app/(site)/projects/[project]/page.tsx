@@ -25,7 +25,7 @@ export default async function Project({ params }: Props) {
             rel="noopener noreferrer"
             className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-purple-500 hover:text-purple-100 transition"
           >
-            View Project
+            View in GitHub 
           </a>
         </div>
         {/* Content goes here */}
