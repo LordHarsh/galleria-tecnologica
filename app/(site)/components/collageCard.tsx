@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
