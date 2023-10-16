@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { getPages } from "@/sanity/sanity-utils";
 import SchoolIcon from '@mui/icons-material/School';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
+import HomeIcon from '@mui/icons-material/Home';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,9 @@ export default async function RootLayout({
                 {page.title}
               </Link>
             ))} */}
+            <Link href='/' >
+              <HomeIcon />
+            </Link>
             <Link href='/about' className="hover:underline">
               <SchoolIcon />
             </Link>
